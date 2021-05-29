@@ -178,3 +178,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Wifi
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=wlan0
+
+# Paper System Other
+PRODUCT_PRODUCT_PROPERTIES += \
+    persist.sys.timezone=Asia/Shanghai
