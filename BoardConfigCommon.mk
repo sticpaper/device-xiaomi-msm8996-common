@@ -205,5 +205,32 @@ WITH_DEXPREOPT := true
 WITH_DEXPREOPT_DEBUG_INFO := false
 USE_DEX2OAT_DEBUG := false
 
+# PaperROM Changes 添加更改部分 - 更新时间2021-05-27 上午03:47:33
+# 编译系统默认语言 (否则定义默认为en-US)
+PAPER_ROM_DEFAULT_LANGUAGES := zh-CN
+# 编译系统的地区类型 (类型为CN (中国版), GLOBAL (全球版), DEMO (拍视频演示版). )
+PAPER_ROM_BUILDSYSTEM_TYPE := CN
+# 编译系统时包括的语言包 (否则使用ROM源码默认参数 languages_all)
+PAPER_ROM_BUILDSYSTEM_LANGUAGES_LIST := languages_cn
+# 编译系统使用的定义参数 (否则使用vendor_xxxxx的默认定义)
+PAPER_ROM_BUILDSYSTEM_MARK := vendor_paper_exthm
+# 编译系统是否启用外置软件包程序 (比如MIUI相机, GAPPS谷歌服务)
+PAPER_ROM_BUILDSYSTEM_OTHER_PACKAGES := false
+# 编译系统的版本维护类型 (否则则为unofficial)
+PAPER_ROM_BUILDSYSTEM_COMPILE_TYPE := OFFICIAL
+# 构建系统默认的版本 (分为用户版, 开发版, 测试版, 调试版)
+PAPER_ROM_BUILDSYSTEM_COMPILE_SYSTEM_TYPE := user
+# 是否禁用用户空间的垃圾模块 (比如无用的温控模块)
+PAPER_ROM_BLACKLIST_MAGISK_EXIT := true
+# 定义安卓(SQLite)系统数据库优化
+PAPER_ROM_ANDROID_SQLITE_MODE := "PERSIST"
+# 禁用安卓系统调试
+PAPER_ROM_BUILDSYSTEM_DEBUG_MASK := false
+# 是否启用PAPER系统优化
+PAPER_ROM_BUILDSYSTEM_TURBO := true
+# 定义工具栏
+PAPER_ROM_BUILDSYSTEM_TOOLS := "vendor"
+# PaperROM Changes 结束更改部分 - 更新时间2021-05-27 上午03:49:40
+
 # Inherit from the proprietary version
 -include vendor/xiaomi/msm8996-common/BoardConfigVendor.mk
